@@ -1,5 +1,14 @@
 # Esercizi ripetizioni
-Repository to share basic c++ programming exercises.
+Repository per lo scambio di esercizi di programmazione di c++ e altro.
+
+```c++
+#import <stdio.h>
+using namespace std;
+int main() {
+  cout << "Hello World!!!";
+  return 0;
+}
+```
 
 ---
 ### Regole per l'uso di questo repository
@@ -12,4 +21,6 @@ Tutte queste regole sono necessarie per tenere meglio traccia delle domande e de
 
 ---
 ### Software utilizzato per le esercitazioni
-Ancora non lo sappiamo.
+Usiamo Fork come client git per semplificare l'utilizzo di Git come DVCS, ma lo usiamo talvolta anche da linea di comando.
+Usiamo Dev C++ (purtroppo :() per scrivere e compilare il codice c++.
+Usiamo Windows come sistema operativo e il suo prompt dei comandi per eseguire i comandi con interfaccia testuale.
