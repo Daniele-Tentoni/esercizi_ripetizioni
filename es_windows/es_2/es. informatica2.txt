@@ -1,0 +1,18 @@
+1) mkdir Gusti_Preferiti
+2) title I miei gusti
+3) mkdir Gusti_Preferiti\Gelati
+4) mkdir Gusti_Preferiti\Pizza
+5) mkdir Gusti_Preferiti\Patatine
+6) cd Gusti_Preferiti\Gelati
+7) 
+echo Cremino > Gelato1.txt
+echo Pistacchio > Gelato2.txt
+echo Bacio > Gelato3.txt
+echo Bufala > ..\Pizza\Pizza1.txt
+echo Marinara > ..\Pizza\Pizza2.txt
+echo Fritte > ..\Patatine\Patatine1.txt
+echo Al_Forno > ..\Patatine\Patatine2.txt
+
+8)robocopy Patatine Pizza
+9)robocopy Pizza Gelati
+10)robocopy Gelati Patatine

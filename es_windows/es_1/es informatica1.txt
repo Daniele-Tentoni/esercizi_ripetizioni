@@ -1,0 +1,27 @@
+mkdir Regioni
+
+title Le mie regioni
+
+cd Regioni
+
+notepad Emilia Romagna.txt
+notepad Abruzzo.txt
+notepad Basilicata.txt
+notepad Calabria.txt
+notepad Campania.txt
+notepad Friuli Venezia Giulia.txt
+notepad Lazio.txt
+notepad Liguria.txt
+notepad Lombardia.txt
+notepad Marche.txt
+notepad Molise.txt
+notepad Piemonte.txt
+notepad Puglia.txt
+notepad Sardegna.txt
+notepad Sicilia.txt
+notepad Toscana.txt
+notepad Umbria.txt
+notepad Valle d'Aosta.txt
+notepad Veneto.txt
+copy *.txt Elenco_Regioni.txt
+del Emilia Romagna.txt Abruzzo.txt Basilicata.txt Calabria.txt Campania.txt Friuli Venezia Giulia.txt Lazio.txt Liguria.txt Lombardia.txt Marche.txt Molise.txt Piemonte.txt Puglia.txt Sardegna.txt Sicilia.txt Toscana.txt Umbria.txt Valle d'Aosta.txt Veneto.txt
