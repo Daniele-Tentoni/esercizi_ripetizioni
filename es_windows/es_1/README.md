@@ -1,6 +1,6 @@
 ## Esercizio 1
 
-Crea un file *batch* che:
+Crea un file **batch** che:
 1. Crei una cartella chiamata "Regioni"
 2. Cambia il titolo del prompt in "Le mie regioni"
 3. Spostati all'interno di quella cartella
