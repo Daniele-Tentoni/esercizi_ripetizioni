@@ -1,6 +1,6 @@
 ## Esercizio 3
 
-Creare un file bat che esegua i seguenti comandi:
+Creare un file *batch* che esegua i seguenti comandi:
 1. Creare una cartella chiamata "esercizi"
 2. Cambiare il titolo del prompt in "Esercizi svolti"
 3. Creare una cartella al suo interno chiamata "esercizi_svolti"

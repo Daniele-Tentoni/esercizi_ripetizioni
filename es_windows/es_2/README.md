@@ -1,6 +1,7 @@
 ## Esercizio 2
-Crea un file batch che:
-1. Crei una cartella chiamata "Gusti_Preferiti"
+
+Crea un file *batch* che:
+1. Crea una cartella chiamata "Gusti_Preferiti"
 2. Cambia il titolo del prompt in "I miei gusti"
 3. Crea dentro alla cartella del punto 1 la cartella "Gelati"
 4. Crea dentro alla cartella del punto 1 la cartella "Pizza"
