@@ -1,0 +1,2 @@
+## Esercitazione 4
+Descrivi l'algoritmo che elenca le operazioni necessarie per eseguire la somma di due numeri di tre cifre in colonna (Descrivi tutte le operazioni che vengono effettuate cifra per cifra).
