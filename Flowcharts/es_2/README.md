@@ -1,0 +1,2 @@
+## Esercizio 2
+Descrivi l'algortimo che permetta di riempire una bacinella con 5 litri di acqua con solamente un secchio da 4 litri e un secchio da 3 litri. La bacinella, come anche i secchi, possono essere riempiti e svuotati a piacimento quante volte si vuole (occhio però a non sprecare troppa acqua ;).

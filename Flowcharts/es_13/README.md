@@ -1,0 +1,2 @@
+## Esercitazione 7
+Descrivi l'algoritmo che legge un numero, e, dove è possibile, ne calcola la radice quadrata visualizzando il risultato, altrimenti comunica un messaggio di errore, quindi disegna il flowchart.

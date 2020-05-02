@@ -2,7 +2,7 @@
 Repository per lo scambio di esercizi di programmazione di c++ e altro.
 
 ```c++
-#import <stdio.h>
+#import <iostream>
 using namespace std;
 int main() {
   cout << "Hello World!!!";
