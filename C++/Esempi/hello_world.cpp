@@ -14,5 +14,5 @@ using namespace std;
 int main()
 {
 	cout << "Hello World!";
-	return 10;
+	return 0;
 }

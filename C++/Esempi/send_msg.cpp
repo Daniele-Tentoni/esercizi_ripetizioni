@@ -20,11 +20,6 @@ int main()
 	 * senza prima averla dichiarata.
 	 */
 	string msg = "msg standard";
-	cout << "msg: " << msg << "\n";
-	
-	// Assegnamo un valore differente a msg.
-	msg = "male male";
-	cout << "msg: " << msg << "\n";
 	
 	// Mostra all'utente una scritta sulla console.
 	cout << "Inserire messaggio da mettere dentro a msg: ";
