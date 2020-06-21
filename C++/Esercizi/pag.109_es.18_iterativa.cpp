@@ -2,26 +2,25 @@
 using namespace std ;
 
 
-int Divisione (int num , int den, int quoz )
+int DivisioneIter (int num, int den)
 {
-
-while (num>=den) {
-
-	
-	num = num - den ;
-	quoz ++ ;
-	
-}
- 
-
-	
-cout << " quoziente =  " << quoz << endl ;	
-		
-	
-	
-	return quoz ;
+	int quoz;
+	while (num>=den) {
+		num = num - den ;
+		quoz ++ ;
+	}	
+	cout << " quoziente =  " << quoz << endl ;	
+	return quoz;
 }
 
+int DivisioneRic(int num, int den) {
+	if(num < den)
+		return 0;
+
+	int newNum = num - den;
+	int risultato = DivisioneRic(newNum, den);
+	return 1 + risultato;
+}
 
 int main ()
 
@@ -35,6 +34,6 @@ cout << " inserire denominatore = " ;
 cin >> b ;
  
 
-risultato = Divisione ( a ,  b ,  risultato ) ;	
-		
+risultato = DivisioneRic ( a ,  b) ;	
+		cout << "risultato: " << risultato << endl;
 }
