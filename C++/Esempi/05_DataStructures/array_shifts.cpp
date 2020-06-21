@@ -1,44 +1,55 @@
 #include <iostream>
+#define L 5
 
 using namespace std;
 
-void shiftone(int *a);
-void shiftn(int *a, size_t n);
-void shiftall(int *a, size_t n);
+void shiftWithLoosing(int *a, size_t size, bool forward);
+void shiftWithoutLoosing(int *a, size_t size, bool forward);
+void printArray(int *a, size_t start, size_t end);
 
 /* 
 Un ARRAY è una sequenza di elementi dello stesso tipo, quindi detto omogeneo.
 */
 
 int main() {
-	int wait;
-	// Posso dichiarare un array con il tipo degli elementi e la sua dimensione.
-	int myArray[5];
-	// Oppure senza dimensione ma con una sequenza di elementi.
-	int another[] {2, 4, 6, 8};
-	// La dimesione deve sempre essere una costante intera.
-	// Fare schema della rappresentazione in memoria con gli indici.
-	// Tutti i successivi elementi non inizializzati verranno posti a 0.
+	int myArray[L] = {1, 2, 3, 4, 5};
 
-	// Possiamo accedere ai singoli elementi dell'array attraverso l'operatore [x].
-	myArray[1] = 1;
-	// Non possiamo accedere ad un array oltre alla sua dimensione.
-	// another[5] = 10 ERRORE!!!
+	// Mostro come effettuare lo shift degli elementi dell'array.
+	printArray(myArray, 0, L);
+	shiftWithLoosing(myArray, L, true);
+	printArray(myArray, 0, L);
 
-	// Possiamo scansionare tutto un array attraverso un ciclo for.
-	for(int i = 0; i < 4; i++) {
-		cout << "Index: " << i << " ";
-		cout << "Value: " << another[i] << endl;
-	}
-	cin >> wait;
-
-	// Possiamo usare vettori come parametri di funzioni.
-	swapArrayOf4Elements(another);
-	printArray(another, 4);
-	cin >> wait;
-
-	swapArray(myArray, 5);
-	printArray(myArray, 5);
-	// Notare come myArray non sia stato inizializzato.
+	// Mostro come effettuare lo shift di tutti gli elementi dell'array
+	// anche senza perdere l'informazione in esso contenuta.
+	shiftWithoutLoosing(myArray, L, true);
+	printArray(myArray, 0, L);
 	return 0;
+}
+
+void shiftWithLoosing(int *a, size_t size, bool forward) {
+	for(int i = 0; i < size - 1; i++)
+		if(forward)
+			a[i] = a[i + 1];
+		else
+			a[i + 1] = a[i];
+}
+
+void shiftWithoutLoosing(int *a, size_t size, bool forward) {
+	int tmp = forward ? a[0] : a[size - 1];
+	shiftWithLoosing(a, size, forward);
+	if(forward)
+		a[size - 1] = tmp;
+	else
+		a[0] = tmp;
+}
+
+void printArray(int *a, size_t start, size_t end) {
+	cout << "[";
+	for(size_t i = start; i < end; i++) {
+		cout << a[i];
+		if(i != end - 1) {
+			cout << ", ";
+		}
+	}
+	cout << "]" << endl;
 }
