@@ -15,7 +15,7 @@ int main() {
 	// Posso dichiarare un array con il tipo degli elementi e la sua dimensione.
 	int myArray[5];
 	// Oppure senza dimensione ma con una sequenza di elementi.
-	int another[] {2, 4, 6, 8};
+	int another[] = {2, 4, 6, 8};
 	// La dimesione deve sempre essere una costante intera.
 	// Fare schema della rappresentazione in memoria con gli indici.
 	// Tutti i successivi elementi non inizializzati verranno posti a 0.
@@ -30,6 +30,10 @@ int main() {
 		cout << "Index: " << i << " ";
 		cout << "Value: " << another[i] << endl;
 	}
+
+	cin >> wait;
+
+	cout << "Riferimento del vettore : " << another << endl;
 	cin >> wait;
 
 	// Possiamo usare vettori come parametri di funzioni.
@@ -45,7 +49,7 @@ int main() {
 
 void swapArrayOf4Elements(int a[4]) {
 	// Perché arrivo al massimo fino a 3?
-	for(int i = 0; i < 3; i++) {
+	for(int i = 0; i < 4; i++) {
 		int tmp = a[i];
 		a[i] = a[i+1];
 		a[i+1] = tmp;

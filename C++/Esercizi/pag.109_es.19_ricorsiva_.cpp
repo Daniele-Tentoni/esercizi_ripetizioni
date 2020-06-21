@@ -4,9 +4,9 @@ using namespace std ;
 int Elevazione ( int base, int esponente)
 {
 	if (esponente == 0)
-	return 1 ;
+		return 1 ;
 	
-	return base * Elevazione (base , esponente - 1);
+	return base * Elevazione (base, esponente - 1);
 }
 
 int main ()
