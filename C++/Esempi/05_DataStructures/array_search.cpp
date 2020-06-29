@@ -5,6 +5,7 @@ using namespace std;
  * Questa funzione scorre tutti gli elementi dell'array
  * passato come parametro arr compresi tra gli indici
  * start ed end il numero num.
+ */
 int search(int arr[], int start, int end, int num) {
 	for(int i = start; i < end; i++) {
 		if(arr[i] == num)
@@ -41,6 +42,7 @@ int main() {
 	cin >> elem;
 
 	int index = search(arr, 0, 10, num);
+	// int index = binarySearch(arr, 0 , 10, num);
 	if(index < 0)
 		cout << "Elemento non trovato" << endl;
 	else
