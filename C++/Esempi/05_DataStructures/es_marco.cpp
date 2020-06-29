@@ -3,12 +3,15 @@
 
 using namespace std;
 
-void printArray(int *a, size_t n) {
-	// Devo chiarare di spostarmi lungo l'array di un numero di byte congruo.
-	for(size_t i = 0; i < n; i++) {
-		cout << "Index: " << i << " ";
-		cout << "Value: " << a[i] << endl;
+void printArray(int *a, size_t start, size_t end) {
+	cout << "[";
+	for(size_t i = start; i < end; i++) {
+		cout << a[i];
+		if(i != end - 1) {
+			cout << ", ";
+		}
 	}
+	cout << "]" << endl;
 }
 
 int array_sum(int num_cons, int num[]) {

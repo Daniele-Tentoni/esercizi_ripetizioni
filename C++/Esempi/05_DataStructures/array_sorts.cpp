@@ -83,11 +83,11 @@ void bubbleSort(int *a, int start, int end) {
 	// Variabili come sopra.
 	int flag = 0, cont = 0;
 
-	for(int i = start; i < end; i++, flag++) {
-		for(int j = start + flag; j < end; j++, cont++)
+	for(int i = start; i < end - 1; i++) {
+		for(int j = start; j < end - 1 - i + start; j++, cont++)
 			// Scambio due valori non appena mi accorgo che sono disordinati.
-			if(a[i] > a[j])
-				swap(a[i], a[j]);
+			if(a[j] > a[j + 1])
+				swap(a[j], a[j + 1]);
 		printArray(a, start, end);
 	}
 }
