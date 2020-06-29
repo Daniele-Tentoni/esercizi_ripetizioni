@@ -18,17 +18,17 @@ int search(int arr[], int start, int end, int num) {
 /*
  * Cosa fa questa funzione?
  */
-int binarySearch(int arr[], int p, int r, int num) {
-	if(p <= r) {
-		int mid = (p + r) / 2;
+int binarySearch(int arr[], int start, int end, int num) {
+	if(start <= end) {
+		int mid = (start + end) / 2;
 		if(arr[mid] == num)
 			return mid;
 
 		if(arr[mid] > num)
-			return binarySearch(arr, p, mid - 1, num);
+			return binarySearch(arr, start, mid - 1, num);
 
-		if(arr[mid] > num)
-			return binarySearch(arr, mid + 1, r, num);
+		if(arr[mid] < num)
+			return binarySearch(arr, mid + 1, end, num);
 	}
 
 	return -1;
@@ -41,8 +41,9 @@ int main() {
 	cout << "Cerca un numero dentro all'array: ";
 	cin >> elem;
 
-	int index = search(arr, 0, 10, num);
-	// int index = binarySearch(arr, 0 , 10, num);
+	// int index = search(arr, 0, 10, elem);
+	int index = binarySearch(arr, 0 , 10, elem);
+
 	if(index < 0)
 		cout << "Elemento non trovato" << endl;
 	else

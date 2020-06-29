@@ -2,6 +2,7 @@
 #include<cmath>
 using namespace std;
 
+// Return the number of max possibile tries.
 double getTriesNum(int num) {
 	if(num < 0)
 		return -1;
@@ -9,8 +10,9 @@ double getTriesNum(int num) {
 	return sqrt(num);
 }
 
+// Take a number between start and end.
 int takeNumber(int start, int end) {
-	return (end - start) / 2 + start;
+	return (end + start) / 2;
 }
 
 /*
