@@ -1,6 +1,5 @@
 #include <iostream>
 #include <climits>
-#define COL 5
 
 using namespace std;
 
@@ -17,7 +16,7 @@ void printOddRow(int col) {
 	cout << "+" << endl;
 }
 
-void printMatrix(int a[][COL], int row, int col) {
+void printMatrix(int a[][5], int row, int col) {
 	printOddRow(col);
 	for(int i = 0; i < row; i++) {
 		cout << "|";
@@ -41,35 +40,39 @@ int main() {
 	 * componente più grande e più piccola.
 	 */
 	int n;
-	cout << "Inserire numero di righe e colonne" << endl;
+	cout << "Inserire numero di righe e colonne (max 5)" << endl;
 	cin >> n;
 
 	/*
 	 * Devo dichiarare la matrice con tutte le dimensioni fisse tranne la
 	 * prima per poterle gestire come argomenti nelle funzioni.
 	 */
-	int m1[n][COL], m2[n][COL];
+	int matrix[n][5];
+
 	/*
 	 * Riempio la matrice con dei valori casuali e poi la stampo.
 	 */
 	for(int i = 0; i < n; i++)
 		for(int j = 0; j < n; j++)
-			m1[i][j] = rand() % 100;
+			matrix[i][j] = rand() % 100;
+	printMatrix(matrix, n, n);
+
 	/*
-	 * Riempio la matrice con dei valori casuali e poi la stampo.
+	 * Confronto tutti gli elementi della matrice alla ricerca di quello
+	 * maggiore. A quel punto ne salvo le coordinate.
 	 */
+	int max = INT_MIN, maxi = 0, maxj = 0;
 	for(int i = 0; i < n; i++)
 		for(int j = 0; j < n; j++)
-			m2[i][j] = rand() % 100;
-	printMatrix(m1, n, n);
-	printMatrix(m2, n, n);
+			if(matrix[i][j] > max) {
+				max = matrix[i][j];
+				maxi = i;
+				maxj = j;
+			}
 
-	for(int a = 0; a < n; a++)
-		for(int b = 0; b < n; b++)
-			for(int c = 0; c < n; c++)
-				for(int d = 0; d < n; d++)
-					if(m1[a][b] == m2[c][d]) 
-						cout << "Trovato valore " << m1[a][b] << " in posizione [" << a << "][" << b << "] e [" << c << "][" << d << "]" << endl;
-
+	/*
+	 * Stampo le coordinate e il valore massimo.
+	 */
+	cout << "Max: " << max << " at [" << maxi << "]x[" << maxj << "]" << endl;
 	return 0;
 }
