@@ -9,9 +9,9 @@ struct misura
 	int val; // Valore misura.
 };
 
-void printMisure(struct misura *mis);
+void printMisure(misura *mis);
 
-void printOneMisure(struct misura mis);
+void printOneMisure(misura mis);
 
 int main() {
 	// Ho dichiarato una variabile di tipo Struttura misura.
@@ -28,11 +28,11 @@ int main() {
 	string un;
 	cin >> un;
 
-	struct misura multi[num];
+	misura multi[num];
 
 	int i = 0;
 	do {
-		struct misura mymisura;
+		misura mymisura;
 
 		cout << "Inserire il valore misurato" << endl;
 		int n;
@@ -42,7 +42,6 @@ int main() {
 
 		multi[i] = mymisura;
 		i++;
-
 	} while(i < num);
 
 	cout << "Stampa misure 1" << endl;
@@ -66,12 +65,12 @@ int main() {
 	return 0;
 }
 
-void printMisure(struct misura *mis) {
+void printMisure(misura *mis) {
 	// Perché ho dovuto usare l'operatore freccia?
 	cout << "Val: " << mis->val << " Unit: " << mis->unit << endl;
 }
 
-void printOneMisure(struct misura mis){
+void printOneMisure(misura mis){
 	// E perché qui non l'ho dovuto usare?
 	cout << "Val mis: " << mis.val << " Unit mis: " << mis.unit << endl;
 }

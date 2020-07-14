@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -6,12 +7,11 @@ using namespace std;
 struct misura
 {
 	string unit; // Nome dell'unità di misura da usare.
-	int val; // Valore misura.
-};
+	int val; 	// Valore misura.
+} mymisura;
 
 int main() {
 	// Ho dichiarato una variabile di tipo Struttura misura.
-	struct misura mymisura;
 	cout << "Esercitazione base sui records: Misure" << endl;
 	cout << "Inserire l'unità di misura che si vuole registrare" << endl;
 	string un;
