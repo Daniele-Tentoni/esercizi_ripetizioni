@@ -5,16 +5,26 @@ int funzionePotenza ( int base, int esponente)
 {
 //	int risultato ;
 
-	int baseFissa = base ;
-	for ( int i = 0 ; i < esponente-1 ; i++)
-	{
-		if ( i == 0 )
-		base = base * baseFissa ;
-		if ( i != 0 )
-		base = base * baseFissa ;
-	}
+	if ( esponente == 0 )
 	
+	base = 1 ;
+
+	int baseFissa = base ;
+	
+	if (esponente != 0 )
+	{
+		for ( int i = 0 ; i < esponente-1 ; i++)
+		{
+			base = base * baseFissa ;
+		}	
+	}
 	return base ;
+}
+
+int funzionePotenzaRicorsiva ( int base, int esponente ) {
+	if ( esponente == 0 )
+		return base = 1 ;
+	return base * funzionePotenzaRicorsiva ( base , esponente-1) ;				
 }
 
 int main ()
@@ -25,6 +35,6 @@ int main ()
 	cout << " Digitare l'esponente della potenza - "<<endl ;
 	cin >> e ;
 	
-	risultato = funzionePotenza ( b , e );
+	risultato = funzionePotenzaRicorsiva ( b , e );
 		cout<<" risultato della potenza = "<<risultato<<endl ;
 }
