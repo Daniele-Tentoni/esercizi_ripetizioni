@@ -1,16 +1,17 @@
 #include <iostream>
-#include <cmath>
 using namespace std ;
 
 int funzionePotenza ( int base, int esponente)
 {
 //	int risultato ;
+
+	int baseFissa = base ;
 	for ( int i = 0 ; i < esponente-1 ; i++)
 	{
 		if ( i == 0 )
-		base = base * base ;
+		base = base * baseFissa ;
 		if ( i != 0 )
-		base = base * sqrt(base) ;
+		base = base * baseFissa ;
 	}
 	
 	return base ;
