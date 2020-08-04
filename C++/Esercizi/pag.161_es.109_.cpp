@@ -12,7 +12,8 @@ struct identita
 };
 
 void printIdentita(identita a) {
-	cout << "{" << a.nome << ", " << a.cognome << ", " << a.CF << ", " << a.comune << "}" << endl;
+	cout << "{" << a.nome << ", " << a.cognome << ", " << a.CF 
+		<< ", " << a.comune << "}" << endl;
 }
 
 void printArray(identita a[], size_t start, size_t end) {
@@ -43,7 +44,8 @@ void compareComune(identita a[], int lenght)
 		cout << "Nessun concittadino trovato, mi dispiace " << endl;	
 }
 
-void compareCodiceFiscale(identita a[], int lenght, string nomeCercato, string cognomeCercato)
+void compareCodiceFiscale(identita a[], int lenght, string nomeCercato, 
+						string cognomeCercato)
 {
 	int contatore = 0;
 	for (int j = 0; j < lenght; j++)
@@ -105,7 +107,8 @@ int main ()
 	
 	compareCodiceFiscale(persone , N , nomeCercato , cognomeCercato);
 	
-	// e qui dovrei fare la parte dove mi chiede di sistemarli in ordine alfabetico 
+	// e qui dovrei fare la parte dove mi chiede di sistemarli 
+	// in ordine alfabetico 
 	sortPersons(persone, N);
 	printArray(persone, 0, N);
 }
