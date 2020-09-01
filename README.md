@@ -1,7 +1,11 @@
 # Esercizi ripetizioni
-Repository per lo scambio di esercizi di programmazione di c++ e altro.
+Repository per lo scambio di esercizi di programmazione di c++ e altro. L'idea un futuro potrebbe essere di trasformare questo repository in una "guida" alla programmazione c++ ed utilizzarlo anche per le future ripetizioni (nel caso in cui ci saranno mai).
 
 ```c++
+/*
+ * Author: Daniele Tentoni
+ * Copyright: 2020
+ */
 #import <iostream>
 using namespace std;
 int main() {
@@ -12,12 +16,15 @@ int main() {
 
 ---
 ### Regole per l'uso di questo repository
-1. Scaricare questo repository e creare un nuovo branch ogni volta che si vuole iniziare un esercizio e pushare ogni punto che si ritiene completato.
+1. Scaricare questo repository sul proprio computer attraverso la sezione download.
+1. Seguire qualche esempio dalla cartella degli esempi per capire la sintassi degli argomenti.
+1. Spostarsi nelle cartelle degli esercizi e provare a svolgerne qualcuno.
 1. Dentro ad ogni cartella di esercizio ci sarà un file readme simile a questo contenente il testo dell'esercizio e il risultato aspettato. Seguire tutte le indicazioni contenute al suo interno.
-1. Creare una PR quando si ritiene di aver svolto completamente l'esercizio e si vuole avere una correzione.
 1. Creare una issue quando si vuole sottoporre una domanda.
 
 Tutte queste regole sono necessarie per tenere meglio traccia delle domande e delle correzioni che vengono apportate.
+
+Questo repository potrebbe essere potenziato aggiungendo una sorta di "validatore di esercizi" per poter verificare che l'esercizio sia stato svolto correttamente oppure no.
 
 ---
 ### Software utilizzato per le esercitazioni
