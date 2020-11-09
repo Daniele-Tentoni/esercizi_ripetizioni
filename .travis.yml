@@ -17,4 +17,7 @@ branches:
   only:
     - master
 
+script:
+  - g++ C++/Esempi/01_Base/hello_world.cpp hello_world.exe
+  - ./C++/Esempi/01_Base/hello_world.exe
 

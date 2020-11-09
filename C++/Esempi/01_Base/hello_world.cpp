@@ -1,9 +1,9 @@
 // Author: Daniele Tentoni
-// Organization: Me stesso
+// Organization: Daniele Tentoni
 
 /*
- * Questo commento viene messo su più linee.
- * Questo è piuttosto utile.
+ * Questo commento viene messo su piu' linee.
+ * Questo e' piuttosto utile.
  */
 
 #include <iostream>  // Libreria I/O
